@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drag drop upload image</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <h2>Upload Photo</h2>
+        <div class="upload" id="upload">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6l96 0 32 0 208 0c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
+            </svg>
+            <h4>Drop your image here or <span>browse</span></h4>
+            <p>PNG,JPG,JPEG</p>
+        </div>
+        <input type="file" id="file">
+        <div class="progressbar two">
+            <div class="image">
+                <img id="imagePreview" src="data:image/jpeg;base64,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"
+                    alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <h5>Background_picture2.PNG</h5>
+
+                    <div class="cross four">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="trash">
+                            <path
+                                d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="size five">
+                    <p>12MB</p>
+                </div>
+                <div class="bar three">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <h3>Are you sure want to delete uploaded picture?</h3>
+        <div class="btn">
+            <button id="Cancel">Cancel</button>
+            <button id="delete">Delete</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

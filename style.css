@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: silver;
+}
+
+.container {
+    background-color: white;
+    width: 340px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.upload svg {
+    width: 40px;
+    height: 40px;
+}
+
+.upload {
+    border: 2px dashed rgb(183, 3, 183);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload h4 {
+    font-family: "Roboto", sans-serif;
+}
+
+.upload p {
+    color: gray;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+}
+
+.container h2 {
+    font-family: "Roboto", sans-serif;
+    padding: 10px 0px;
+}
+
+input {
+    visibility: hidden;
+}
+
+.upload-image {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upload-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.popup {
+    background-color: silver;
+    width: 340px;
+    max-height: 200px;
+    height: 150px;
+    border-radius: 10px;
+    display: none;
+    padding: 20px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.btn button {
+    border: none;
+    padding: 10px 13px;
+    border-radius: 5px;
+}
+
+.btn button:nth-child(1) {
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.btn button:nth-child(2) {
+    background-color: rgba(255, 0, 0, 0.405);
+    border: 1px solid rgba(255, 0, 0, 0.405);
+    color: black;
+}
+
+@keyframes ani1 {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cross {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cross svg {
+    width: 15px;
+    height: 15px;
+}
+
+.cross svg:nth-child(2) {
+    fill: red;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.size p {
+    font-size: 12px;
+    color: gray;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 50px;
+    border: 0.5px solid gray;
+
+}
+
+.bar span {
+    width: 30%;
+    height: 100%;
+    display: block;
+    background-color: blue;
+    border-radius: 50px;
+
+}
+
+.size {
+    display: none;
+    padding-bottom: 5px;
+}
+
+.cross {
+    display: none;
+}
+
+.progressbar {
+    border: 1px solid gray;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px gray;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    display: none;
+}
+
+.content {
+    display: block;
+    width: 100%;
+}
+
+.image {
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+
+
+.icon h5 {
+    padding-bottom: 10px;
+    width: 150px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: start;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.two {
+    margin-top: 20px;
+}
+
+.three span {
+    width: 100%;
+    animation: ani2 1s ease-in;
+}
+
+.four svg:nth-child(1) {
+    fill: green;
+}
+
+.four svg:nth-child(2) {
+    fill: red;
+}
+
+@keyframes ani2 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
